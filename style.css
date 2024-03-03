@@ -327,15 +327,20 @@ h1 {
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: start;
+    align-items: center;
     justify-items: start;
+    gap: 3rem;
   }
 
   .hero picture {
     grid-column: 1 / span 2;
   }
 
-  .hero .btn {
+  h1 {
+    font-size: 5.6rem;
+  }
+
+  .hero__cta {
     grid-column: 2;
   }
 
