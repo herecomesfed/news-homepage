@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+picture {
+  display: block;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  margin: 5%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--very-dark-blue);
+}
+
+p {
+  color: var(--dark-grayish-blue);
+}
+
+/* -------------------------------------------------------------------------------- */
+/* ! variables */
+/* -------------------------------------------------------------------------------- */
+
+:root {
+  --soft-orange: hsl(35, 77%, 62%);
+  --soft-red: hsl(5, 85%, 63%);
+
+  --off-white: hsl(36, 100%, 99%);
+  --grayish-blue: hsl(233, 8%, 79%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+  --very-dark-blue: hsl(240, 100%, 5%);
+}
+
+/* -------------------------------------------------------------------------------- */
+/* ! Header */
+/* -------------------------------------------------------------------------------- */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo {
+  width: 5rem;
+}
+
+.header .burger {
+  position: relative;
+  z-index: 99999999;
+}
+
+[menu-open="false"] .burger__icon--close {
+  display: none;
+}
+
+[menu-open="true"] .burger__icon--open {
+  display: none;
+}
+
+[menu-open="true"] .burger__icon--close {
+  display: block;
+}
+
+.header .menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  height: 100%;
+  z-index: 9999999;
+  background: white;
+  font-size: 2.4rem;
+  transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.header .menu[aria-expanded="true"] {
+  right: 0;
+}
+
+.header .menu ul {
+  margin-top: 15rem;
+  padding-inline: 2rem;
+}
+
+.header .menu li {
+  margin-block: 2rem;
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.header .menu li:hover {
+  color: var(--soft-red);
+}
+
+.menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.3;
+}
+
+[menu-open="true"] .menu-overlay {
+  display: block;
+}
+
+/* -------------------------------------------------------------------------------- */
+/* ! Main */
+/* -------------------------------------------------------------------------------- */
+
+main {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+}
+
+main > * {
+  margin-block: 3rem;
+}
+
+.sidebar {
+  grid-row: 2;
+}
+
+/* -------------------------------------------------------------------------------- */
+/* ! Hero */
+/* -------------------------------------------------------------------------------- */
+
+.hero picture {
+  margin-bottom: 2.5rem;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  margin-bottom: 2.5rem;
+}
+
+.btn a {
+  display: inline-block;
+  cursor: pointer;
+  text-transform: uppercase;
+  background: var(--soft-red);
+  color: var(--off-white);
+  padding: 2rem 3rem;
+
+  letter-spacing: 0.5rem;
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.btn:hover a {
+  background: var(--very-dark-blue);
+}
+
+/* -------------------------------------------------------------------------------- */
+/* ! Sidebar */
+/* -------------------------------------------------------------------------------- */
+
+.sidebar {
+  background: var(--very-dark-blue);
+  padding: 3rem;
+}
+
+.sidebar h2 {
+  color: var(--soft-orange);
+  font-size: 3.2rem;
+}
+
+.sidebar p {
+  color: var(--grayish-blue);
+}
+
+.sidebar__content {
+  padding-block: 3rem;
+  position: relative;
+}
+
+.sidebar__content:not(:last-child) {
+  border-bottom: 1px solid var(--dark-grayish-blue);
+}
+
+.sidebar__content h3 {
+  color: var(--off-white);
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.sidebar__content h3:hover {
+  color: var(--soft-orange);
+}
+
+/* -------------------------------------------------------------------------------- */
+/* ! Focus */
+/* -------------------------------------------------------------------------------- */
+
+.focus-box__focus {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.focus-box__focus:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+.focus-box-img {
+  width: 33.33333%;
+}
+.focus-content {
+  width: 66.66666%;
+}
+
+.focus-content > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.focus-content .focus-index {
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: var(--grayish-blue);
+  display: block;
+}
+
+.focus-content h3 {
+  font-weight: 800;
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.focus-content h3:hover {
+  color: var(--soft-red);
+}
+
+.attribution {
+  margin-top: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    margin: 3%;
+  }
+
+  .header .menu {
+    position: relative;
+    top: 0;
+    right: 0;
+    font-size: 1.5rem;
+  }
+
+  .header .menu ul {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0;
+    padding-inline: 0;
+    gap: 3rem;
+    color: var(--dark-grayish-blue);
+  }
+
+  .burger {
+    display: none;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 3rem;
+    row-gap: 6rem;
+    margin-top: 3rem;
+  }
+
+  main > * {
+    margin: 0;
+  }
+
+  .hero {
+    grid-column: 1 / span 2;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    justify-items: start;
+  }
+
+  .hero picture {
+    grid-column: 1 / span 2;
+  }
+
+  .hero .btn {
+    grid-column: 2;
+  }
+
+  .sidebar {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .focus-box {
+    grid-column: 1 / span 3;
+    grid-row: 2;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    gap: 3rem;
+  }
+
+  .focus-box > * {
+    width: 33.333333%;
+  }
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+
+    <title>Frontend Mentor | News homepage</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header" class="header" menu-open="false">
+      <div class="logo">
+        <img src="assets/images/logo.svg" alt="Logo" />
+      </div>
+      <nav class="menu" aria-expanded="false">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/">New</a></li>
+          <li><a href="/">Popular</a></li>
+          <li><a href="/">Trending</a></li>
+          <li><a href="/">Categories</a></li>
+        </ul>
+      </nav>
+      <div class="menu-overlay"></div>
+      <div class="burger" data-open="false">
+        <img
+          class="burger__icon--open"
+          src="assets/images/icon-menu.svg"
+          alt="Open"
+        />
+        <img
+          class="burger__icon--close"
+          src="assets/images/icon-menu-close.svg"
+          alt="Close"
+        />
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <picture>
+          <source
+            srcset="./assets/images/image-web-3-desktop.jpg"
+            media="(min-width:768px)"
+          />
+          <img src="./assets/images/image-web-3-mobile.jpg" alt="Hero Image" />
+        </picture>
+        <h1>The Bright Future of Web 3.0?</h1>
+        <p>
+          We dive into the next evolution of the web that claims to put the
+          power of the platforms back into the hands of the people. But is it
+          really fulfilling its promise?
+        </p>
+        <div class="btn"><a href="#">Read More</a></div>
+      </section>
+
+      <div class="focus-box">
+        <div class="focus-box__focus focus-box__focus--1">
+          <div class="focus-box-img">
+            <img
+              src="./assets/images/image-retro-pcs.jpg"
+              alt="Image Retro PCS"
+            />
+          </div>
+          <div class="focus-content">
+            <span class="focus-index"> 01 </span>
+            <h3><a href="#">Reviving Retro PCs</a></h3>
+            <p>What happens when old PCs are given modern upgrades?</p>
+          </div>
+        </div>
+        <div class="focus-box__focus focus-box__focus--2">
+          <div class="focus-box-img">
+            <img
+              src="./assets/images/image-top-laptops.jpg"
+              alt="Top laptops"
+            />
+          </div>
+          <div class="focus-content">
+            <span class="focus-index"> 02 </span>
+            <h3><a href="#">Top 10 Laptops of 2022</a></h3>
+            <p>Our best picks for various needs and budgets.</p>
+          </div>
+        </div>
+        <div class="focus-box__focus focus-box__focus--3">
+          <div class="focus-box-img">
+            <img
+              src="./assets/images/image-gaming-growth.jpg"
+              alt="Gaming Growth"
+            />
+          </div>
+          <div class="focus-content">
+            <span class="focus-index"> 03 </span>
+            <h3><a href="#">The Growth of Gaming</a></h3>
+            <p>How the pandemic has sparked fresh opportunities.</p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="sidebar">
+        <h2>New</h2>
+        <div class="sidebar__contents">
+          <div class="sidebar__content sidebar__content--1">
+            <h3><a href="#">Hydrogen VS Electric Cars</a></h3>
+            <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+          </div>
+          <div class="sidebar__content sidebar__content--2">
+            <h3><a href="#">The Downsides of AI Artistry</a></h3>
+            <p>
+              What are the possible adverse effects of on-demand AI image
+              generation?
+            </p>
+          </div>
+          <div class="sidebar__content sidebar__content--3">
+            <h3><a href="#">Is VC Funding Drying Up?</a></h3>
+            <p>
+              Private funding by VC firms is down 50% YOY. We take a look at
+              what that means.
+            </p>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <!-- Home New Popular Trending Categories The Bright Future of Web 3.0? We dive
+    into the next evolution of the web that claims to put the power of the
+    platforms back into the hands of the people. But is it really fulfilling its
+    promise? Read more New Hydrogen VS Electric Cars Will hydrogen-fueled cars
+    ever catch up to EVs? The Downsides of AI Artistry What are the possible
+    adverse effects of on-demand AI image generation? Is VC Funding Drying Up?
+    Private funding by VC firms is down 50% YOY. We take a look at what that
+    means. 01 Reviving Retro PCs What happens when old PCs are given modern
+    upgrades? 02 Top 10 Laptops of 2022 Our best picks for various needs and
+    budgets. 03 The Growth of Gaming How the pandemic has sparked fresh
+    opportunities. -->
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://grazianifederico.it" target="_blank">Herecomesfed</a>.
+    </div>
+  </body>
+</html>
