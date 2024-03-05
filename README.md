@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Built with
 
-- CSS Grids
+- CSS Gridssss
 
 ## Author
 
